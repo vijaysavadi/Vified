@@ -146,7 +146,7 @@ a {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
   }
@@ -158,7 +158,7 @@ a {
   height: 40px;
 }
 
-.icon--small{
+.icon--small {
   width: 30px;
   height: 30px;
 }
@@ -167,7 +167,7 @@ a {
   fill: var(--color-primary);
 }
 
-.icon--white{
+.icon--white {
   fill: #fff;
 }
 
@@ -181,7 +181,7 @@ a {
   align-items: center;
 }
 
-.icon-container--accent{
+.icon-container--accent {
   background: var(--color-accent);
 }
 
@@ -341,11 +341,11 @@ a {
   margin-bottom: 2rem;
 }
 
-.plan--popular .card__header{
+.plan--popular .card__header {
   position: relative;
 }
 
-.plan--popular .card__header::before{
+.plan--popular .card__header::before {
   content: url(../images/external-badge-fitness-kiranshastry-lineal-kiranshastry.png);
   width: 40px;
   display: inline-block;
@@ -367,124 +367,139 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+}
 
+/* Media Objects */
 
-  /* Media Objects */
+.media {
+  display: flex;
+}
 
-  .media{
-    display: flex;
-  }
+.media__title {
+  margin-top: 0;
+}
 
-  .media__title{
-    margin-top: 0;
-  }
-  
-  .media__body{
-    margin: 0 2rem;
-  }
+.media__body {
+  margin: 0 2rem;
+}
 
-  .media__image{
-    margin: 1rem;
-  }
+.media__image {
+  margin: 1rem;
+}
 
-  /* quotes */
+/* quotes */
 
-  .quote{
-    font-size: 3rem;
-    font-style: italic;
-    color: var(--color-body-darker);
-    line-height: 1.3;
-  }
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-body-darker);
+  line-height: 1.3;
+}
 
-  .quote__text::before{
-    content: open-quote;
-  }
+.quote__text::before {
+  content: open-quote;
+}
 
-  .quote__text::after{
-    content: close-quote;
-  }
+.quote__text::after {
+  content: close-quote;
+}
 
-  .quote__author{
-    font-size: 3rem;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 0;
-  }
+.quote__author {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
 
-  .quote__organisation{
-    color: var(--color-headings);
-    opacity: .4;
+.quote__organisation {
+  color: var(--color-headings);
+  opacity: 0.4;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
     font-size: 2rem;
-    font-style: normal;
   }
 
-  .quote__line{
-    position: relative;
-    bottom: 10px;
+  .quote__author {
+    font-size: 2.4rem;
   }
 
-  @media  screen and (min-width:1024px)
-   {
-    .quote{
-      font-size: 2rem;
-    }
+  .quote__organisation {
+    font-size: 1.6rem;
+  }
+}
 
-    .quote__author{
-      font-size: 2.4rem;
-    }
+/* Grids */
 
-    .quote__organisation{
-      font-size: 1.6rem;
-    }
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*Testimonials*/
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 3.5rem;
   }
 
-
-  /* Grids */
-
-  .grid{
-    display: grid;
+  .testimonial .quote {
+    margin-left: 6rem;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .grid--1x2{
-      grid-template-columns: 1fr 1fr;
-    }
-  }
+/*callout*/
 
-  @media screen and (min-width: 1024px) {
-    .grid--1x3{
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
 
-  /*Testimonials*/
+.callout--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
 
-  .testimonial{
-    padding: 3rem;
-  }
-
-  .testimonial__image{
-    position: relative;
-  }
-
-  .testimonial__image > img {
-    width: 100%;
-  }
-
-  .testimonial__image > .icon-container{
-    position: absolute;
-    top: 3rem;
-    right: -32px;
-  }
-
-  @media screen and (min-width:768px) {
-    .testimonial .quote,
-    .testimonial .quote__author{
-      font-size: 3.5rem;
-    }
-
-    .testimonial .quote{
-      margin-left: 6rem;
-    }
-    
-  }
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
